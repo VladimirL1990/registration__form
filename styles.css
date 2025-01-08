@@ -21,7 +21,7 @@ body {
   min-width: 300px;
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
+  border-radius: 15px 70px;
   background-image: url('https://masterpiecer-images.s3.yandex.net/0e40edb447e111ee9bda5a1112d6d6c5:upscaled');
   background-size: cover;
   background-position: center;
@@ -76,7 +76,7 @@ select {
   min-height: 2em;
   padding: 0.5em;
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 5px 25px 15px 30px;
 }
 
 input, textarea {
@@ -140,4 +140,41 @@ input[type="checkbox"]:checked {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2.5em; /* Увеличим высоту для удобства */
+  font-size: 1.2rem; /* Немного увеличим размер шрифта */
+  background-color: #3b3b4f; /* Цвет фона */
+  border: 1px solid #3b3b4f; /* Обводка того же цвета */
+  color: #fff; /* Белый текст */
+  border-radius: 15px  30px 5px 30px; /* Радиус скругления для кнопки */
+  cursor: pointer; /* Указываем, что это кликабельный элемент */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Плавное изменение фона и эффекта трансформации */
+  text-align: center; /* Выравнивание текста по центру */
+  padding: 0.5em 1em; /* Немного увеличим отступы */
+  box-sizing: border-box; /* Чтобы отступы учитывались в размере */
+}
+
+input[type="submit"]:hover {
+  background-color: #50507e; /* Цвет при наведении */
+  transform: scale(1.05); /* Эффект увеличения при наведении */
+}
+
+input[type="submit"]:active {
+  background-color: #333; /* Цвет при нажатии */
+  transform: scale(0.98); /* Немного уменьшаем кнопку при нажатии */
+}
+
+input[type="submit"]:focus {
+  outline: none; /* Убираем стандартное обрамление при фокусе */
+  border-color: red; /* Желтая обводка при фокусе */
+  box-shadow: 0 0 5px red; /* Легкая тень */
+}
+
+input[type="submit"]:focus-visible {
+  border-color: red; /* Цвет рамки при фокусе */
+  box-shadow: 0 0 5px red; /* Легкая тень при фокусе */
 }

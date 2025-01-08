@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+  background-color: #1b1b32;
+  color: black;
+  height: 100vh;  /* Устанавливаем высоту body на 100% высоты окна */
+  display: flex;
+  justify-content: center; /* Центрируем форму по горизонтали */
+  align-items: center; /* Центрируем форму по вертикали */
+  overflow-x: hidden;
+}
+
+.form-container {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  background-image: url('https://masterpiecer-images.s3.yandex.net/0e40edb447e111ee9bda5a1112d6d6c5:upscaled');
+  background-size: cover;
+  background-position: center;
+  animation: fadeIn 1s ease-in-out;
+  height: auto;
+  max-height: 90vh;
+  overflow-y: scroll;  /* Прокрутка по вертикали */
+}
+
+/* Скрыть саму полосу прокрутки */
+.form-container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+h1, p {
+  text-align: center;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+form {
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  padding: 0.5em;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+input, textarea {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #3b3b4f;
+  background-color: #222;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #50507e;
+}
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
+label a {
+  color: #dfdfe2;
+  text-decoration: none;
+}
+
+label a:hover {
+  text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #3b3b4f;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
